@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.write('<p>Ciclos y Metodos</p>');
+    var opciones = prompt("Por favor, ingrese un numero entre 1 y 5", "1");
+
+    switch (opciones){
+        case "1":
+        ingreso = parseInt(prompt("Ingrese un número entre 1 a 100", "Ingrese aquí su respuesta"));
+        for (let i = 0; i <= ingreso; i++) {
+        console.log(i);
+        }
+        break;
+        case "2":
+        ingreso = prompt("¿De qué color es el caballo blanco de Napoleón?", "Ingrese aquí su respuesta");
+        while (ingreso != "blanco") {
+        prompt("¿De qué color es el caballo blanco de Napoleón?", "Ingrese aquí su respuesta");
+        break;
+        }
+        break;
+        case "3":
+        ingresouno = parseInt(prompt("Ingrese su promedio de notas de Matemáticas", "Ingrese aquí su respuesta"));
+        ingresodos = parseInt(prompt("Ingrese su promedio de notas de Física", "Ingrese aquí su respuesta"));
+        ingresotres = parseInt(prompt("Ingrese su promedio de notas de Ciencias", "Ingrese aquí su respuesta"));      
+        let promedios =[ingresouno, ingresodos, ingresotres];
+        let sum = promedios.reduce((previous, current) => current += previous);
+        let promedioFinal = sum / promedios.length;
+        alert('su promedio final es: ' + promedioFinal);
+        break;
+        case "4":
+        ingresouno = prompt("Ingrese el nombre de una fruta", "Ingrese aquí su respuesta");
+        ingresodos = prompt("Ingrese el nombre de una segunda fruta", "Ingrese aquí su respuesta");
+        ingresotres = prompt("Ingrese el nombre de una tercera, y ultima, fruta", "Ingrese aquí su respuesta");
+        let frutas =[ingresouno, ingresodos, ingresotres];
+        if (ingresouno != 'manzana'){
+            console.log(ingresouno);
+        }if (ingresodos != 'manzana'){
+            console.log(ingresodos);
+        }if (ingresotres != 'manzana'){
+            console.log(ingresotres);
+        }
+        break;
+        case "5":
+        ingreso = prompt("Ingrese su nombre", "Ingrese aquí su respuesta");
+        contarVocales = function (str){
+var vocales = 'aeiouAEIOU';
+var contador = 0;
+
+for (var i = 0; i < str.length; i++){
+    if(vocales.indexOf(str[i]) !== -1) {
+    contador +=1;
+    }
+}
+return contador
+}
+alert('Nombre contiene'+ " " + contarVocales(ingreso) + ' ' + 'vocales' + ' , ' + 'ademas, cuenta con' + ' ' + parseInt(ingreso.length-contarVocales(ingreso)) + ' ' + 'consonantes'); 
+break;            
+}
+    
+</script>
+<body>
+    
+</body>
+</html>
